@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin:0;">
+    <div style="height: 100vh; width: 100vw; display:flex; justify-content:center; align-items: center; flex-direction: column;">
+        <h1>Registration</h1>
+        <form action="", method = "post" style="display: flex; flex-direction:column">
+            <input style="margin: 0.5rem 0" name="name" placeholder="Name">
+            <input style="margin: 0.5rem 0" type="email" name="email" placeholder="Email">
+            <input style="margin: 0.5rem 0" name="r_no"   placeholder="Roll_Number">
+            <input style="margin: 0.5rem 0" type="password" placeholder="Password" name="password" >
+            <button style="margin: 0.5rem 0" type="submit">Submit</button>
+        </form>
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+    </div>
+</body>
+</html>
