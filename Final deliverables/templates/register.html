@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Registration</title>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/validateForm.js') }}">
+</script>
+</head>
+
+<body style="margin:0; width:100vw; height: 100vh; display:flex; flex-direction: column; justify-content: center; align-items: center">
+<div style="display: flex; align-items:center; text-decoration:none">
+    <img id="logo" style="height: 4rem" src= {{ url_for('static', filename='images/logo.png') }} />
+    <h1 style="font-family: 'Cookie', cursive; color: white; font-size:2.5rem">Fashunn</h1>
+</div>
+
+<div style="border:2px solid black; width:20vw; border-radius:0.5rem; padding: 1rem;">
+
+    <form action="/register" method="POST" onsubmit="return validate()">
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Your Email" type="email" name="email"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Password" type="password" name="password" id="password" required></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Confirm Password" type="password" name="cpassword" id="cpassword"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="First Name" type="text" name="firstName"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Last Name" type="text" name="lastName"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Address line 1" type="text" name="address1"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Address line 2" type="text" name="address2"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Zipcode" type="text" name="zipcode"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="City" type="text" name="city"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="State" type="text" name="state"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Country" type="text" name="country"></div>
+        <div style="display: flex; margin: 0.25rem 0; justify-content: center"><input placeholder="Phone" type="text" name="phone"></div>
+
+        <div style="display: flex; justify-content: space-between; margin: 0.5rem 0; ">
+            <a href="/loginForm" style="border: 1px solid #036ffc; border-radius: 0.25rem; padding: 0.5rem 1rem; text-decoration: None; color: White; background-color: #036ffc">Login</a>
+            <input type="submit" style="border: 1px solid green; border-radius: 0.25rem; padding: 0.5rem 1rem; text-decoration: None; color: White; background-color: green">
+        </div>
+    </form>
+
+    <p style="text-align: right; color: red; margin: 1rem 0 0 0 "> {{error}} </p>
+</div>
+</body>
+</html>
+
+
+
